@@ -31,15 +31,3 @@ public class User {
         return Objects.hash(getName(), getBirthdate());
     }
 }
-
-
-
-
-
-
-
-
-
-
-
-
