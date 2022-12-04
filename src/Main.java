@@ -12,16 +12,8 @@ public class Main {
                 new User("鈴木花子", LocalDate.of(2002, 4, 4)));
 
         System.out.println("【すべてのユーザーを表示する】");
-        users.forEach(u -> System.out.printf("名前: %s, 生年月日: %s\n", u.getName(), u.getBirthdate()));
+        users.forEach(u -> System.out.printf("名前: %s, 生年月日: %s\n", u.getName(), u.getBirthdate().format(DateTimeFormatter.ofPattern("yyyy年/M月/d日/(E)"))));
 
 
-        DateTimeFormatter dateTimeFormatter = DateTimeFormatter.ofPattern("yyyy-MM-dd");
-        new User("佐藤美咲", DateTimeFormatter.ofPattern("1990, 1, 1"));
-        new User("鈴木太郎", DateTimeFormatter.ofPattern("1991, 2, 2"));
-        new User("山田一郎", DateTimeFormatter.ofPattern("2003, 3, 3"));
-        new User("鈴木花子", DateTimeFormatter.ofPattern("2002, 4, 4"));
-
-        System.out.println("【すべてのユーザーを表示する】");
-        users.forEach(u -> System.out.printf("名前: %s, 生年月日: %s\n", u.getName(), u.getBirthdate()));
     }
 }
